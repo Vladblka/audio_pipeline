@@ -55,6 +55,10 @@ cd ..
 
 ### 5. Доступ к моделям pyannote на Hugging Face
 
+Установить ffmpeg-shared версии 6, 7 или 8. Можно воспользоваться готовыми сборками: https://www.gyan.dev/ffmpeg/builds/ 
+
+### 6. Доступ к моделям pyannote на Hugging Face
+
 Модели диаризации и эмбеддингов — gated, то есть для их скачивания нужно один раз принять условия использования, будучи авторизованным на Hugging Face:
 
 1. Зайдите под своим аккаунтом и примите соглашение на странице [`pyannote/speaker-diarization-community-1`](https://huggingface.co/pyannote/speaker-diarization-community-1).
@@ -63,7 +67,7 @@ cd ..
 Без этого шага `Pipeline.from_pretrained(...)` и `Model.from_pretrained(...)` упадут с ошибкой доступа (401/403), даже если токен указан верно.
 
 
-### 6. Токен Hugging Face
+### 7. Токен Hugging Face
 
 1. Создайте токен на странице [hf.co/settings/tokens](https://huggingface.co/settings/tokens) с правом **Read** (полных прав на запись для этого пайплайна не требуется).
 2. Создайте в корне проекта файл `config.txt` и вставьте туда токен **одной строкой, без пробелов и пустой строки в конце**.
@@ -73,7 +77,7 @@ cd ..
 
 ```
 .
-├── config.txt                  # HF-токен (не коммитить!)
+├── config.txt                  # HF-токен 
 ├── requirements.txt
 ├── data/                       # входные .wav файлы
 ├── results/                    # выходные *_result.json (создаётся автоматически)
