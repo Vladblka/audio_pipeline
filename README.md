@@ -53,7 +53,7 @@ pip install -e .[torch]
 cd ..
 ```
 
-### 5. Доступ к моделям pyannote на Hugging Face
+### 5. Установка необходимых зависимостей
 
 Установить ffmpeg-shared версии 6, 7 или 8. Можно воспользоваться готовыми сборками: https://www.gyan.dev/ffmpeg/builds/ 
 
