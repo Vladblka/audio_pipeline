@@ -41,8 +41,11 @@ venv\Scripts\activate         # Windows
 ```bash
 pip install -r requirements.txt
 ```
+### 4. Установка PyTorch с поддержкой Cuda
 
-### 4. Установка GigaAM
+Установить PyTorch можно на официальном сайте: https://pytorch.org/get-started/locally/
+
+### 5. Установка GigaAM
 
 GigaAM не распространяется через `pip install gigaam` — согласно официальной инструкции его нужно ставить из исходников в editable-режиме:
 
@@ -53,11 +56,11 @@ pip install -e .[torch]
 cd ..
 ```
 
-### 5. Установка необходимых зависимостей
+### 6. Установка необходимых зависимостей
 
 Установить ffmpeg-shared версии 6, 7 или 8. Можно воспользоваться готовыми сборками: https://www.gyan.dev/ffmpeg/builds/ 
 
-### 6. Доступ к моделям pyannote на Hugging Face
+### 7. Доступ к моделям pyannote на Hugging Face
 
 Модели диаризации и эмбеддингов — gated, то есть для их скачивания нужно один раз принять условия использования, будучи авторизованным на Hugging Face:
 
@@ -67,7 +70,7 @@ cd ..
 Без этого шага `Pipeline.from_pretrained(...)` и `Model.from_pretrained(...)` упадут с ошибкой доступа (401/403), даже если токен указан верно.
 
 
-### 7. Токен Hugging Face
+### 8. Токен Hugging Face
 
 1. Создайте токен на странице [hf.co/settings/tokens](https://huggingface.co/settings/tokens) с правом **Read** (полных прав на запись для этого пайплайна не требуется).
 2. Создайте в корне проекта файл `config.txt` и вставьте туда токен **одной строкой, без пробелов и пустой строки в конце**.
